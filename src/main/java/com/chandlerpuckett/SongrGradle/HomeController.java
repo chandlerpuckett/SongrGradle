@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
+    @GetMapping("/")
+    public String home(){
+        return "index";
+    }
+
     @GetMapping("/hello")                            // in js: app.get("/)
     public String showHome(){
         return "hello";                          // filename for thymeleaf file for render --> ejs
