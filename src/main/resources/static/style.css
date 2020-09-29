@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     margin: auto;
+    background-color: #90a692;
 }
 
 h1 {
@@ -21,12 +23,21 @@ h4 {
 
 img {
     max-width: 50%;
+    padding: 20px;
 }
 
 div {
     margin: auto;
-    max-width: 1350px;
+    margin-bottom: 50px;
+
+    max-width: 1000px;
     text-align: center;
+
+    padding: 5px;
+
+    background-color: #e9d8be;
+    border: 2px solid #d6c1a0;
+    box-shadow: 5px 5px 5px #d3c2aae8;
 }
 
 p {
