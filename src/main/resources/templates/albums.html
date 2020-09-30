@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Albums</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+    <body>
+        <h1>ALBUMS</h1>
+
+        <div th:each="data : ${albumList}">
+            <h2 th:text="${data.title}">Title</h2>
+            <h4 th:text="${data.artist}">Artist</h4>
+            <img th:src="${data.imageUrl}" alt="">
+            <p th:text="'Song Count: ' + ${data.songCount} + ' songs'">Song Count</p>
+            <p th:text="'Album Length: ' + ${data.length} + ' min'">length</p>
+        </div>
+
+    </body>
+</html>
