@@ -55,4 +55,15 @@ public class Album {
     public void setLength(int length) {
         this.length = length;
     }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "title='" + title + '\'' +
+                ", artist='" + artist + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", songCount=" + songCount +
+                ", length=" + length +
+                '}';
+    }
 }
