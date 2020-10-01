@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -25,6 +26,13 @@ public class AlbumController {
         Album newAlbum = new Album(title, artist, imageUrl,songCount,length);
 
         albumRepository.save(newAlbum);
+        return new RedirectView("/albums");
+    }
+
+    @PostMapping("/albums/delete/{id}")
+    public RedirectView removeAlbum(@PathVariable long id){
+
+        albumRepository.deleteById(id);
         return new RedirectView("/albums");
     }
 
